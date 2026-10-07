@@ -1,0 +1,29 @@
+body {
+    background-color: #eaf4ff !important;
+}
+
+/* Company logo */
+.companyLogo {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* B2C buttons */
+button {
+    background-color: #0078d4 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    border: none !important;
+}
+
+/* Button hover */
+button:hover {
+    background-color: #005a9e !important;
+}
+
+/* B2C input fields */
+input {
+    border-radius: 6px !important;
+}
