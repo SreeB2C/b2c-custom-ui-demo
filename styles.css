@@ -1,29 +1,64 @@
-body {
-    background-color: #eaf4ff !important;
+
+/* 1. Page background - light blue */
+html,
+body,
+#background_branding_container {
+    background-color: #dceeff !important;
 }
 
-/* Company logo */
+/* Hide the old Microsoft background image */
+#background_branding_container img {
+    display: none !important;
+}
+
+/* 2. Butterfly company logo */
 .companyLogo {
-    width: 120px;
-    height: auto;
+    width: 120px !important;
+    height: auto !important;
+    max-height: none !important;
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 12px auto;
+    object-fit: contain;
 }
 
-/* B2C buttons */
-button {
-    background-color: #0078d4 !important;
+/* 3. Butterfly company name */
+.companyName {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #17406d;
+    text-align: center;
+    margin: 10px 0 25px 0;
+}
+
+/* 4. Buttons - green */
+#api button:not(#cancel),
+#api input[type="submit"] {
+    background-color: #198754 !important;
     color: #ffffff !important;
-    border-radius: 8px !important;
     border: none !important;
+    border-radius: 8px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
 }
 
-/* Button hover */
-button:hover {
-    background-color: #005a9e !important;
+/* 5. Button hover - dark green */
+#api button:not(#cancel):hover,
+#api input[type="submit"]:hover {
+    background-color: #146c43 !important;
 }
 
-/* B2C input fields */
-input {
+/* 6. Input fields */
+#api input[type="email"],
+#api input[type="text"],
+#api input[type="password"] {
+    font-size: 16px !important;
     border-radius: 6px !important;
 }
+
+/* 7. Labels */
+#api label {
+    font-size: 15px;
+    color: #253858;
+}
+
