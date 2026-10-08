@@ -1,39 +1,56 @@
 
+
+/* ===================================
+   BUTTERFLY - AZURE B2C CUSTOM UI
+   =================================== */
+
 /* 1. Page background - light blue */
 html,
 body,
-#background_branding_container {
+#background_branding_container,
+.container.self_asserted_container {
     background-color: #dceeff !important;
+    background-image: none !important;
 }
 
-/* Hide the old Microsoft background image */
-#background_branding_container img {
+/* 2. Hide Microsoft background image */
+#background_branding_container img,
+img[data-tenant-branding-background="true"] {
     display: none !important;
 }
 
-/* 2. Butterfly company logo */
-.companyLogo {
+/* 3. White login card */
+.self_asserted_container .row .panel-default {
+    background-color: #ffffff !important;
+    border-radius: 12px !important;
+}
+
+/* 4. Butterfly company logo */
+.self_asserted_container .row .panel-default
+.panel-body img.companyLogo {
     width: 120px !important;
     height: auto !important;
     max-height: none !important;
-    display: block;
-    margin: 0 auto 12px auto;
+    display: block !important;
     object-fit: contain;
+    margin: 0 auto 12px auto !important;
 }
 
-/* 3. Butterfly company name */
+/* 5. Butterfly company name */
 .companyName {
     font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: #17406d;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    color: #17406d !important;
     text-align: center;
     margin: 10px 0 25px 0;
 }
 
-/* 4. Buttons - green */
-#api button:not(#cancel),
-#api input[type="submit"] {
+/* 6. Continue button - green */
+#api .buttons #continue,
+#api .buttons button:not(#cancel),
+#api .sendCode,
+#api .verifyCode {
     background-color: #198754 !important;
     color: #ffffff !important;
     border: none !important;
@@ -42,23 +59,39 @@ body,
     font-weight: 600 !important;
 }
 
-/* 5. Button hover - dark green */
-#api button:not(#cancel):hover,
-#api input[type="submit"]:hover {
+/* 7. Button hover - dark green */
+#api .buttons #continue:hover,
+#api .buttons button:not(#cancel):hover,
+#api .sendCode:hover,
+#api .verifyCode:hover {
     background-color: #146c43 !important;
 }
 
-/* 6. Input fields */
+/* 8. Cancel button - simple text */
+#api .buttons #cancel {
+    background: transparent !important;
+    color: #505050 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    width: auto !important;
+    height: auto !important;
+    font-size: 15px !important;
+}
+
+/* 9. Input fields */
 #api input[type="email"],
 #api input[type="text"],
 #api input[type="password"] {
     font-size: 16px !important;
     border-radius: 6px !important;
+    border: 1px solid #9ca3af !important;
 }
 
-/* 7. Labels */
+/* 10. Labels */
 #api label {
-    font-size: 15px;
-    color: #253858;
+    font-size: 15px !important;
+    color: #253858 !important;
 }
+
 
